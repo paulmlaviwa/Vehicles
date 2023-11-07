@@ -1,20 +1,20 @@
 package com.pluralsight;
 
 public class Vehicle {
-    private String make;
-    private String model;
-    private int year;
-    private String fuelType;
-    private int fuelCapacity;
-    private int fuelLevel;
-    private String engineType;
-    private int engineSize;
-    private int numberOfPassengers;
-    private int maxSpeed;
-    private String color;
-    private int cargoCapacity;
-    private String cargoType;
-    private double vehicleDamage;
+    protected String make;
+    protected String model;
+    protected int year;
+    protected String fuelType;
+    protected int fuelCapacity;
+    protected int fuelLevel;
+    protected String engineType;
+    protected int engineSize;
+    protected int numberOfPassengers;
+    protected int maxSpeed;
+    protected String color;
+    protected int cargoCapacity;
+    protected String cargoType;
+    protected double vehicleDamage;
 
 
     //Setters and Getters
@@ -130,55 +130,32 @@ public class Vehicle {
         this.engineSize = engineSize;
     }
 
-    public static void main(String[] args) {
-        //Gasoline-Powered Car
-        Car gasolineCar = new Car();
-        gasolineCar.setFuelType("Gasoline");
-        gasolineCar.setFuelCapacity(15);
-        gasolineCar.setEngineType("Internal Combustion Engine");
-        gasolineCar.setNumberOfPassengers(4);
-        gasolineCar.setMaxSpeed(280);
-        gasolineCar.setColor("Navy Blue");
-        gasolineCar.setCargoCapacity(400);
+    public void start(){
 
-        //Electric Car
-        Car electricCar = new Car();
-        electricCar.setFuelType("Electric");
-        electricCar.setFuelCapacity(60);
-        electricCar.setEngineType("Electric Motor");
-        electricCar.setNumberOfPassengers(4);
-        electricCar.setMaxSpeed(90);
-        electricCar.setColor("Blue");
-        electricCar.setCargoCapacity(300);
+    }
 
-        //Diesel-Powered Semi Truck
-        SemiTruck dieselTruck = new SemiTruck();
-        dieselTruck.setFuelType("Diesel");
-        dieselTruck.setFuelCapacity(150);
-        dieselTruck.setEngineType("Diesel Engine");
-        dieselTruck.setNumberOfPassengers(2);
-        dieselTruck.setMaxSpeed(65);
-        dieselTruck.setColor("Black");
-        dieselTruck.setCargoCapacity(20000);
+    public void accelerate(){
 
-        //Hovercraft
-        Hovercraft hovercraft = new Hovercraft();
-        hovercraft.setFuelType("Jet Fuel");
-        hovercraft.setFuelCapacity(500);
-        hovercraft.setEngineType("Jet Engine");
-        hovercraft.setNumberOfPassengers(30);
-        hovercraft.setMaxSpeed(100);
-        hovercraft.setColor("White");
-        hovercraft.setCargoCapacity(1000);
+    }
 
-        //Moped
-        Moped slowRide = new Moped();
-        slowRide.setFuelType("Gasoline");
-        slowRide.setFuelCapacity(2);
-        slowRide.setEngineType("Small Engine");
-        slowRide.setNumberOfPassengers(1);
-        slowRide.setMaxSpeed(30);
-        slowRide.setColor("Silver");
-        slowRide.setCargoCapacity(10);
+    public void stop(){
+
+    }
+
+    public Vehicle(String make, String model, int year, String fuelType, int fuelCapacity, int fuelLevel, String engineType, int engineSize, int numberOfPassengers, int maxSpeed, String color, int cargoCapacity, String cargoType, double vehicleDamage) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.fuelType = fuelType;
+        this.fuelCapacity = fuelCapacity;
+        this.fuelLevel = fuelLevel;
+        this.engineType = engineType;
+        this.engineSize = engineSize;
+        this.numberOfPassengers = numberOfPassengers;
+        this.maxSpeed = maxSpeed;
+        this.color = color;
+        this.cargoCapacity = cargoCapacity;
+        this.cargoType = cargoType;
+        this.vehicleDamage = vehicleDamage;
     }
 }

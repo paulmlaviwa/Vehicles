@@ -6,7 +6,18 @@ public class Moped extends Vehicle {
     private String scooterType;
     private boolean keylessIgnition;
     private double batteryCapacity;
+    int wheels = 2;
 
+
+    public Moped(String make, String model, int year, String fuelType, int fuelCapacity, int fuelLevel, String engineType, int engineSize, int numberOfPassengers, int maxSpeed, String color, int cargoCapacity, String cargoType, double vehicleDamage, boolean pedaled, String mopedType, String scooterType, boolean keylessIgnition, double batteryCapacity, int wheels, int doors) {
+        super(make, model, year, fuelType, fuelCapacity, fuelLevel, engineType, engineSize, numberOfPassengers, maxSpeed, color, cargoCapacity, cargoType, vehicleDamage);
+        this.pedaled = pedaled;
+        this.mopedType = mopedType;
+        this.scooterType = scooterType;
+        this.keylessIgnition = keylessIgnition;
+        this.batteryCapacity = batteryCapacity;
+        this.wheels = wheels;
+    }
 
     public boolean isPedaled() {
         return false;
